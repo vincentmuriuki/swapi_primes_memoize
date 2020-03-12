@@ -6,4 +6,3 @@ class FavCharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = FavCharacter
         fields = '__all__'
-        
