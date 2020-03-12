@@ -1,0 +1,8 @@
+#heart {
+  color: black;
+  font-size: 50px;
+}
+
+#heart.red {
+  color: red;
+}

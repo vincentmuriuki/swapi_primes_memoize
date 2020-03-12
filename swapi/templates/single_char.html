@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Position">id</abbr></th>
+      <th><abbr title="Actors Name">Actor's Name</abbr></th>
+      <th><abbr title="Eye Color">eye_color</abbr></th>
+      <th><abbr title="Year of Birth">birth_year</abbr></th>
+      <th><abbr title="Year of Birth">Mass</abbr></th>
+      <th><abbr title="Year of Birth">Hair Color</abbr></th>
+      <th><abbr title="Year of Birth">Gender</abbr></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td id="id"></td>
+      <td id="name"></td>
+      <td id="eye_color"></td>
+      <td id="dob"></td>
+
+      <td id="mass"></td>
+      <td id="hair_color"></td>
+      <td id="gender"></td>
+
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><i class="fa fa-heart" onclick="myFunc(this)" id="heart"></i></td>
+      <td><i class="fa fa-heart" onclick="myFunc(this)" id="heart"></i></td>
+      <td><i class="fa fa-heart" onclick="myFunc(this)" id="heart"></i></td>
+      <td><i class="fa fa-heart" onclick="myFunc(this)" id="heart"></i></td>
+      <td><i class="fa fa-heart" onclick="myFunc(this)" id="heart"></i></td>
+      <td><i class="fa fa-heart" onclick="myFunc(this)" id="heart"></i></td>
+    </tr>
+  </tbody>
+</table>
+<script>
+  let data = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("id").innerHTML = data.id;
+  document.getElementById("name").innerHTML = data.name;
+  document.getElementById("eye_color").innerHTML = data.eye_color;
+  document.getElementById("dob").innerHTML = data.birth_year;
+
+  document.getElementById("mass").innerHTML = data.mass;
+  document.getElementById("hair_color").innerHTML = data.hair_color;
+  document.getElementById("gender").innerHTML = data.gender;
+</script>
+
+<script>
+  function myFunc(x) {
+    x.classList.toggle("red");
+  }
+</script>
+{% endblock %}
