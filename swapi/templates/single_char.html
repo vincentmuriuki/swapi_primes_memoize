@@ -43,14 +43,20 @@
   document.getElementById("eye_color").innerHTML = data.eye_color;
   document.getElementById("dob").innerHTML = data.birth_year;
 
+  console.log(data.name.innerHTML)
+
   document.getElementById("mass").innerHTML = data.mass;
   document.getElementById("hair_color").innerHTML = data.hair_color;
   document.getElementById("gender").innerHTML = data.gender;
 </script>
 
 <script>
+  var color = {}
+  let data = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("id").innerHTML = 
   function myFunc(x) {
     x.classList.toggle("red");
+    localStorage.setItem("color", JSON.stringify(color))
   }
 </script>
 {% endblock %}

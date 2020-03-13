@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
     />
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
     <script
       defer
       src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
@@ -93,7 +93,7 @@
       <br /><br />
       <p>SWAPI API</p>
 
-      <br><br>
+      <br /><br />
 
       {% block content %} {% endblock content %}
     </div>
@@ -104,7 +104,8 @@
         user.name = row.cells[1].innerHTML;
         user.eye_color = row.cells[2].innerHTML;
         user.birth_year = row.cells[3].innerHTML;
-
+        // console.log(user.id)
+        // console.log(user.name)
         user.mass = row.cells[4].innerHTML;
         user.hair_color = row.cells[5].innerHTML;
         user.gender = row.cells[6].innerHTML;
@@ -113,6 +114,5 @@
         window.location.href = "details/";
       }
     </script>
-    
   </body>
 </html>

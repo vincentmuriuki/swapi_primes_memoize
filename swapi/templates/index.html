@@ -15,15 +15,15 @@
 
   <tbody>
     {% for fav_char in fav_chars %}
-    <tr data-href="#" onclick="getUserInfo(this)">
+    <tr  onclick="getUserInfo(this)">
       <!-- <th scope="row">{{fav_char.id}}</th> -->
       <td></td>
-      <td>{{fav_char.name}}</td>
-      <td>{{ fav_char.eye_color }}</td>
-      <td>{{fav_char.birth_year}}</td>
-      <td>{{fav_char.mass}}</td>
-      <td>{{fav_char.hair_color}}</td>
-      <td>{{fav_char.gender}}</td>
+      <td><a style="color:black" href="{% url 'view-one' %}">{{fav_char.name}}</a></td>
+      <td><a style="color:black"  href="{% url 'view-one' %}">{{ fav_char.eye_color }}</a></td>
+      <td><a style="color:black"  href="{% url 'view-one' %}">{{fav_char.birth_year}}</a></td>
+      <td><a style="color:black"  href="{% url 'view-one' %}">{{fav_char.mass}}</a></td>
+      <td><a style="color:black"  href="{% url 'view-one' %}">{{fav_char.hair_color}}</a></td>
+      <td><a style="color:black"  href="{% url 'view-one' %}">{{fav_char.gender}}</a></td>
 
     </tr>
 
