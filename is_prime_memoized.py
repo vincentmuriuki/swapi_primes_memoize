@@ -1,10 +1,10 @@
 def memoize(func):
     data = {}
-    def helper(x):
+    def helperfunc(x):
         if x not in data:
             data[x] = func(x)
         return data[x]
-    return helper
+    return helperfunc
 
 @memoize
 def is_prime(number):
@@ -16,8 +16,6 @@ def is_prime(number):
             return True
     else:
         return False
-        
-is_prime(2)
 
 
 a = is_prime(3)

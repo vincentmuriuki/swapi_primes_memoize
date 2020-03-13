@@ -1,3 +1,5 @@
+# Write a function search that accepts 2 arguments: A collection of values and a value to find in the collection
+
 def search(people_arr, x):
     people_arr = sorted(people_arr)
     start = 0

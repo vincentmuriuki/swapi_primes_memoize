@@ -1,3 +1,5 @@
+# Write a function is Prime that returns true if a number is prime.
+
 def is_prime(number):
     if number > 1:
         for i in range(2, number):
