@@ -51,12 +51,8 @@
 </script>
 
 <script>
-  var color = {}
-  let data = JSON.parse(localStorage.getItem("user"));
-  document.getElementById("id").innerHTML = 
   function myFunc(x) {
     x.classList.toggle("red");
-    localStorage.setItem("color", JSON.stringify(color))
   }
 </script>
 {% endblock %}
